@@ -107,6 +107,8 @@ I know there are several PHP ports of [tailwind-merge](https://packagist.org/sea
 
 The main improvement is that the tests come straight from upstream and are treated as law: the behavior contract is the JS `tailwind-merge` test suite itself, not a hand-picked subset. If upstream and this port disagree, upstream is right and the port is the bug.
 
+With 🫀 @stamat
+
 ## License
 
-MIT. Ported from [tailwind-merge](https://github.com/dcastil/tailwind-merge) (MIT, © Dany Castillo).
+MIT, @stamat. Ported from [tailwind-merge](https://github.com/dcastil/tailwind-merge) (MIT, © Dany Castillo).
