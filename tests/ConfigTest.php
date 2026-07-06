@@ -3,8 +3,26 @@
 declare(strict_types=1);
 
 use Stamat\TailwindMerge\ConfigMerger;
+use Stamat\TailwindMerge\DefaultConfig;
 use Stamat\TailwindMerge\TailwindMerge;
 use Stamat\TailwindMerge\ThemeRef;
+
+test('default config is memoized', function (): void {
+    $a = DefaultConfig::config();
+    $b = DefaultConfig::config();
+
+    // `Validators::isTshirtSize(...)` mints a fresh Closure each time it is evaluated.
+    // Identical objects across calls => the literal ran once, not rebuilt per call.
+    expect($a['theme']['blur'][0])->toBe($b['theme']['blur'][0]);
+});
+
+test('mutating a returned config does not corrupt the memoized copy', function (): void {
+    $config = DefaultConfig::config();
+    $config['cacheSize'] = 999;
+
+    // Copy-on-write: the caller mutated its own copy, the shared static is untouched.
+    expect(DefaultConfig::config()['cacheSize'])->toBe(500);
+});
 
 test('prefix working correctly', function (): void {
     $tw = TailwindMerge::create(['prefix' => 'tw']);
