@@ -45,6 +45,9 @@ final class TailwindMerge
      * New instance with the default config plus the given extension
      * (`cacheSize`, `prefix`, `override` and `extend` keys).
      *
+     * Each call rebuilds the class-map trie. For the plain default config, prefer
+     * the shared {@see self::instance()} instead of calling this with no arguments.
+     *
      * @param  array<string, mixed>  $configExtension
      */
     public static function create(array $configExtension = []): self

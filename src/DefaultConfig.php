@@ -9,16 +9,20 @@ namespace Stamat\TailwindMerge;
  *
  * GENERATED FILE — do not edit by hand.
  * Regenerate from the upstream JS package with bin/generate-default-config.mjs
- * (source of truth: dcastil/tailwind-merge v3).
+ * (source of truth: dcastil/tailwind-merge v3.6.0).
  */
 final class DefaultConfig
 {
     /**
-     * @return array{cacheSize: int, theme: array<string, list<mixed>>, classGroups: array<string, list<mixed>>, conflictingClassGroups: array<string, list<string>>, conflictingClassGroupModifiers: array<string, list<string>>, orderSensitiveModifiers: list<string>}
+     * @return array{cacheSize: int, theme: array<string, list<mixed>>, classGroups: array<string, list<mixed>>, conflictingClassGroups: array<string, list<string>>, conflictingClassGroupModifiers: array<string, list<string>>, postfixLookupClassGroups: list<string>, orderSensitiveModifiers: list<string>}
      */
     public static function config(): array
     {
-        return [
+        // Memoized: the literal rebuilds thousands of first-class-callable Closures per call.
+        // Callers mutate only their own copy (PHP arrays are copy-on-write), so sharing is safe.
+        static $config = null;
+
+        return $config ??= [
             'cacheSize' => 500,
             'theme' => [
                 'animate' => [

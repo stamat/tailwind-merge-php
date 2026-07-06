@@ -1,0 +1,9 @@
+{
+    "name": "tailwind-merge-php-generator",
+    "private": true,
+    "type": "module",
+    "description": "Isolated workspace for generate-default-config.mjs. Gitignored; not part of the PHP package.",
+    "dependencies": {
+        "tailwind-merge": "^3"
+    }
+}

@@ -2,5 +2,3 @@
 /.phpunit.cache/
 composer.lock
 /bin/node_modules/
-/bin/package.json
-/bin/package-lock.json

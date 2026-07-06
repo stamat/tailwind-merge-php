@@ -48,10 +48,12 @@ composer lint          # pint
 composer bench         # benchmark vs gehrisandro/tailwind-merge-php
 ```
 
-`src/DefaultConfig.php` is generated from the upstream JS package — do not edit by hand:
+`src/DefaultConfig.php` is generated from the upstream JS package — do not edit by hand.
+The upstream version is pinned in `bin/package-lock.json` and stamped into the generated
+file header; bump `bin/package.json` to move it. CI regenerates and fails on drift.
 
 ```sh
-cd bin && npm install tailwind-merge@^3 && node generate-default-config.mjs
+cd bin && npm install && node generate-default-config.mjs
 ```
 
 `tests/Fixtures/merge-cases.json` holds merge cases extracted from the upstream test
