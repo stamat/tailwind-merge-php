@@ -1,0 +1,44 @@
+{
+    "name": "stamat/tailwind-merge-php",
+    "description": "Merge Tailwind CSS v4 classes without style conflicts. Fast PHP port of tailwind-merge.",
+    "keywords": ["php", "tailwindcss", "tailwind", "merge", "classes"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikola Stamatovic",
+            "email": "nikola@stamat.info"
+        }
+    ],
+    "require": {
+        "php": "^8.2"
+    },
+    "require-dev": {
+        "gehrisandro/tailwind-merge-php": "^1.1",
+        "laravel/pint": "^1.13",
+        "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stamat\\TailwindMerge\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "test": "pest --colors=always",
+        "test:types": "phpstan analyse --ansi",
+        "lint": "pint -v",
+        "bench": "php bench/bench.php"
+    },
+    "minimum-stability": "stable"
+}

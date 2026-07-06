@@ -1,0 +1,2012 @@
+{
+ "tw-merge": [
+  {
+   "args": [
+    "mix-blend-normal mix-blend-multiply"
+   ],
+   "expected": "mix-blend-multiply"
+  },
+  {
+   "args": [
+    "h-10 h-min"
+   ],
+   "expected": "h-min"
+  },
+  {
+   "args": [
+    "stroke-black stroke-1"
+   ],
+   "expected": "stroke-black stroke-1"
+  },
+  {
+   "args": [
+    "stroke-2 stroke-[3]"
+   ],
+   "expected": "stroke-[3]"
+  },
+  {
+   "args": [
+    "outline-black outline-1"
+   ],
+   "expected": "outline-black outline-1"
+  },
+  {
+   "args": [
+    "grayscale-0 grayscale-[50%]"
+   ],
+   "expected": "grayscale-[50%]"
+  },
+  {
+   "args": [
+    "grow grow-[2]"
+   ],
+   "expected": "grow-[2]"
+  },
+  {
+   "args": [
+    "grow",
+    [
+     null,
+     false,
+     [
+      [
+       "grow-[2]"
+      ]
+     ]
+    ]
+   ],
+   "expected": "grow-[2]"
+  }
+ ],
+ "arbitrary-values": [
+  {
+   "args": [
+    "m-[2px] m-[10px]"
+   ],
+   "expected": "m-[10px]"
+  },
+  {
+   "args": [
+    "m-[2px] m-[11svmin] m-[12in] m-[13lvi] m-[14vb] m-[15vmax] m-[16mm] m-[17%] m-[18em] m-[19px] m-[10dvh]"
+   ],
+   "expected": "m-[10dvh]"
+  },
+  {
+   "args": [
+    "h-[10px] h-[11cqw] h-[12cqh] h-[13cqi] h-[14cqb] h-[15cqmin] h-[16cqmax]"
+   ],
+   "expected": "h-[16cqmax]"
+  },
+  {
+   "args": [
+    "z-20 z-[99]"
+   ],
+   "expected": "z-[99]"
+  },
+  {
+   "args": [
+    "my-[2px] m-[10rem]"
+   ],
+   "expected": "m-[10rem]"
+  },
+  {
+   "args": [
+    "cursor-pointer cursor-[grab]"
+   ],
+   "expected": "cursor-[grab]"
+  },
+  {
+   "args": [
+    "m-[2px] m-[calc(100%-var(--arbitrary))]"
+   ],
+   "expected": "m-[calc(100%-var(--arbitrary))]"
+  },
+  {
+   "args": [
+    "m-[2px] m-[length:var(--mystery-var)]"
+   ],
+   "expected": "m-[length:var(--mystery-var)]"
+  },
+  {
+   "args": [
+    "opacity-10 opacity-[0.025]"
+   ],
+   "expected": "opacity-[0.025]"
+  },
+  {
+   "args": [
+    "scale-75 scale-[1.7]"
+   ],
+   "expected": "scale-[1.7]"
+  },
+  {
+   "args": [
+    "brightness-90 brightness-[1.75]"
+   ],
+   "expected": "brightness-[1.75]"
+  },
+  {
+   "args": [
+    "min-h-[0.5px] min-h-[0]"
+   ],
+   "expected": "min-h-[0]"
+  },
+  {
+   "args": [
+    "text-[0.5px] text-[color:0]"
+   ],
+   "expected": "text-[0.5px] text-[color:0]"
+  },
+  {
+   "args": [
+    "text-[0.5px] text-(--my-0)"
+   ],
+   "expected": "text-[0.5px] text-(--my-0)"
+  },
+  {
+   "args": [
+    "hover:m-[2px] hover:m-[length:var(--c)]"
+   ],
+   "expected": "hover:m-[length:var(--c)]"
+  },
+  {
+   "args": [
+    "hover:focus:m-[2px] focus:hover:m-[length:var(--c)]"
+   ],
+   "expected": "focus:hover:m-[length:var(--c)]"
+  },
+  {
+   "args": [
+    "border-b border-[color:rgb(var(--color-gray-500-rgb)/50%))]"
+   ],
+   "expected": "border-b border-[color:rgb(var(--color-gray-500-rgb)/50%))]"
+  },
+  {
+   "args": [
+    "border-[color:rgb(var(--color-gray-500-rgb)/50%))] border-b"
+   ],
+   "expected": "border-[color:rgb(var(--color-gray-500-rgb)/50%))] border-b"
+  },
+  {
+   "args": [
+    "border-b border-[color:rgb(var(--color-gray-500-rgb)/50%))] border-some-coloooor"
+   ],
+   "expected": "border-b border-some-coloooor"
+  },
+  {
+   "args": [
+    "grid-rows-[1fr,auto] grid-rows-2"
+   ],
+   "expected": "grid-rows-2"
+  },
+  {
+   "args": [
+    "grid-rows-[repeat(20,minmax(0,1fr))] grid-rows-3"
+   ],
+   "expected": "grid-rows-3"
+  },
+  {
+   "args": [
+    "mt-2 mt-[calc(theme(fontSize.4xl)/1.125)]"
+   ],
+   "expected": "mt-[calc(theme(fontSize.4xl)/1.125)]"
+  },
+  {
+   "args": [
+    "p-2 p-[calc(theme(fontSize.4xl)/1.125)_10px]"
+   ],
+   "expected": "p-[calc(theme(fontSize.4xl)/1.125)_10px]"
+  },
+  {
+   "args": [
+    "mt-2 mt-[length:theme(someScale.someValue)]"
+   ],
+   "expected": "mt-[length:theme(someScale.someValue)]"
+  },
+  {
+   "args": [
+    "mt-2 mt-[theme(someScale.someValue)]"
+   ],
+   "expected": "mt-[theme(someScale.someValue)]"
+  },
+  {
+   "args": [
+    "text-2xl text-[length:theme(someScale.someValue)]"
+   ],
+   "expected": "text-[length:theme(someScale.someValue)]"
+  },
+  {
+   "args": [
+    "text-2xl text-[calc(theme(fontSize.4xl)/1.125)]"
+   ],
+   "expected": "text-[calc(theme(fontSize.4xl)/1.125)]"
+  },
+  {
+   "args": [
+    "bg-cover bg-[percentage:30%] bg-[size:200px_100px] bg-[length:200px_100px]"
+   ],
+   "expected": "bg-[percentage:30%] bg-[length:200px_100px]"
+  },
+  {
+   "args": [
+    "bg-none bg-[url(.)] bg-[image:.] bg-[url:.] bg-[linear-gradient(.)] bg-linear-to-r"
+   ],
+   "expected": "bg-linear-to-r"
+  },
+  {
+   "args": [
+    "border-[color-mix(in_oklab,var(--background),var(--calendar-color)_30%)] border"
+   ],
+   "expected": "border-[color-mix(in_oklab,var(--background),var(--calendar-color)_30%)] border"
+  },
+  {
+   "args": [
+    "font-[400] font-[600]"
+   ],
+   "expected": "font-[600]"
+  },
+  {
+   "args": [
+    "font-[var(--a)] font-[var(--b)]"
+   ],
+   "expected": "font-[var(--b)]"
+  },
+  {
+   "args": [
+    "font-[weight:var(--a)] font-[var(--b)]"
+   ],
+   "expected": "font-[var(--b)]"
+  },
+  {
+   "args": [
+    "font-[400] font-[weight:var(--b)]"
+   ],
+   "expected": "font-[weight:var(--b)]"
+  },
+  {
+   "args": [
+    "font-[weight:var(--a)] font-[weight:var(--b)]"
+   ],
+   "expected": "font-[weight:var(--b)]"
+  },
+  {
+   "args": [
+    "font-[family-name:var(--a)] font-[var(--b)]"
+   ],
+   "expected": "font-[family-name:var(--a)] font-[var(--b)]"
+  },
+  {
+   "args": [
+    "bg-red bg-(--other-red) bg-bottom bg-(position:-my-pos)"
+   ],
+   "expected": "bg-(--other-red) bg-(position:-my-pos)"
+  },
+  {
+   "args": [
+    "shadow-xs shadow-(shadow:--something) shadow-red shadow-(--some-other-shadow) shadow-(color:--some-color)"
+   ],
+   "expected": "shadow-(--some-other-shadow) shadow-(color:--some-color)"
+  },
+  {
+   "args": [
+    "font-(--a) font-(--b)"
+   ],
+   "expected": "font-(--b)"
+  },
+  {
+   "args": [
+    "font-(weight:--a) font-(--b)"
+   ],
+   "expected": "font-(--b)"
+  },
+  {
+   "args": [
+    "font-(family-name:--a) font-(--b)"
+   ],
+   "expected": "font-(family-name:--a) font-(--b)"
+  }
+ ],
+ "array-values": [
+  {
+   "args": [
+    [
+     "text-white",
+     "bg-black"
+    ]
+   ],
+   "expected": "text-white bg-black"
+  },
+  {
+   "args": [
+    [
+     "text-white",
+     "bg-black"
+    ]
+   ],
+   "expected": "text-white bg-black"
+  }
+ ],
+ "arbitrary-properties": [
+  {
+   "args": [
+    "[paint-order:markers] [paint-order:normal]"
+   ],
+   "expected": "[paint-order:normal]"
+  },
+  {
+   "args": [
+    "[paint-order:markers] [--my-var:2rem] [paint-order:normal] [--my-var:4px]"
+   ],
+   "expected": "[paint-order:normal] [--my-var:4px]"
+  },
+  {
+   "args": [
+    "[paint-order:markers] hover:[paint-order:normal]"
+   ],
+   "expected": "[paint-order:markers] hover:[paint-order:normal]"
+  },
+  {
+   "args": [
+    "hover:[paint-order:markers] hover:[paint-order:normal]"
+   ],
+   "expected": "hover:[paint-order:normal]"
+  },
+  {
+   "args": [
+    "hover:focus:[paint-order:markers] focus:hover:[paint-order:normal]"
+   ],
+   "expected": "focus:hover:[paint-order:normal]"
+  },
+  {
+   "args": [
+    "[paint-order:markers] [paint-order:normal] [--my-var:2rem] lg:[--my-var:4px]"
+   ],
+   "expected": "[paint-order:normal] [--my-var:2rem] lg:[--my-var:4px]"
+  },
+  {
+   "args": [
+    "bg-[#B91C1C] bg-radial-[at_50%_75%] bg-radial-[at_25%_25%]"
+   ],
+   "expected": "bg-[#B91C1C] bg-radial-[at_25%_25%]"
+  },
+  {
+   "args": [
+    "[-unknown-prop:::123:::] [-unknown-prop:url(https://hi.com)]"
+   ],
+   "expected": "[-unknown-prop:url(https://hi.com)]"
+  },
+  {
+   "args": [
+    "![some:prop] [some:other]"
+   ],
+   "expected": "![some:prop] [some:other]"
+  },
+  {
+   "args": [
+    "![some:prop] [some:other] [some:one] ![some:another]"
+   ],
+   "expected": "[some:one] ![some:another]"
+  }
+ ],
+ "arbitrary-variants": [
+  {
+   "args": [
+    "[p]:underline [p]:line-through"
+   ],
+   "expected": "[p]:line-through"
+  },
+  {
+   "args": [
+    "[&>*]:underline [&>*]:line-through"
+   ],
+   "expected": "[&>*]:line-through"
+  },
+  {
+   "args": [
+    "[&>*]:underline [&>*]:line-through [&_div]:line-through"
+   ],
+   "expected": "[&>*]:line-through [&_div]:line-through"
+  },
+  {
+   "args": [
+    "supports-[display:grid]:flex supports-[display:grid]:grid"
+   ],
+   "expected": "supports-[display:grid]:grid"
+  },
+  {
+   "args": [
+    "dark:lg:hover:[&>*]:underline dark:lg:hover:[&>*]:line-through"
+   ],
+   "expected": "dark:lg:hover:[&>*]:line-through"
+  },
+  {
+   "args": [
+    "dark:lg:hover:[&>*]:underline dark:hover:lg:[&>*]:line-through"
+   ],
+   "expected": "dark:hover:lg:[&>*]:line-through"
+  },
+  {
+   "args": [
+    "hover:[&>*]:underline [&>*]:hover:line-through"
+   ],
+   "expected": "hover:[&>*]:underline [&>*]:hover:line-through"
+  },
+  {
+   "args": [
+    "hover:dark:[&>*]:underline dark:hover:[&>*]:underline dark:[&>*]:hover:line-through"
+   ],
+   "expected": "dark:hover:[&>*]:underline dark:[&>*]:hover:line-through"
+  },
+  {
+   "args": [
+    "[@media_screen{@media(hover:hover)}]:underline [@media_screen{@media(hover:hover)}]:line-through"
+   ],
+   "expected": "[@media_screen{@media(hover:hover)}]:line-through"
+  },
+  {
+   "args": [
+    "hover:[@media_screen{@media(hover:hover)}]:underline hover:[@media_screen{@media(hover:hover)}]:line-through"
+   ],
+   "expected": "hover:[@media_screen{@media(hover:hover)}]:line-through"
+  },
+  {
+   "args": [
+    "[&[data-open]]:underline [&[data-open]]:line-through"
+   ],
+   "expected": "[&[data-open]]:line-through"
+  },
+  {
+   "args": [
+    "[&[data-foo][data-bar]:not([data-baz])]:underline [&[data-foo][data-bar]:not([data-baz])]:line-through"
+   ],
+   "expected": "[&[data-foo][data-bar]:not([data-baz])]:line-through"
+  },
+  {
+   "args": [
+    "[&>*]:[&_div]:underline [&>*]:[&_div]:line-through"
+   ],
+   "expected": "[&>*]:[&_div]:line-through"
+  },
+  {
+   "args": [
+    "[&>*]:[&_div]:underline [&_div]:[&>*]:line-through"
+   ],
+   "expected": "[&>*]:[&_div]:underline [&_div]:[&>*]:line-through"
+  },
+  {
+   "args": [
+    "hover:dark:[&>*]:focus:disabled:[&_div]:underline dark:hover:[&>*]:disabled:focus:[&_div]:line-through"
+   ],
+   "expected": "dark:hover:[&>*]:disabled:focus:[&_div]:line-through"
+  },
+  {
+   "args": [
+    "hover:dark:[&>*]:focus:[&_div]:disabled:underline dark:hover:[&>*]:disabled:focus:[&_div]:line-through"
+   ],
+   "expected": "hover:dark:[&>*]:focus:[&_div]:disabled:underline dark:hover:[&>*]:disabled:focus:[&_div]:line-through"
+  },
+  {
+   "args": [
+    "[&>*]:[color:red] [&>*]:[color:blue]"
+   ],
+   "expected": "[&>*]:[color:blue]"
+  },
+  {
+   "args": [
+    "[&[data-foo][data-bar]:not([data-baz])]:nod:noa:[color:red] [&[data-foo][data-bar]:not([data-baz])]:noa:nod:[color:blue]"
+   ],
+   "expected": "[&[data-foo][data-bar]:not([data-baz])]:noa:nod:[color:blue]"
+  }
+ ],
+ "class-group-conflicts": [
+  {
+   "args": [
+    "overflow-x-auto overflow-x-hidden"
+   ],
+   "expected": "overflow-x-hidden"
+  },
+  {
+   "args": [
+    "basis-full basis-auto"
+   ],
+   "expected": "basis-auto"
+  },
+  {
+   "args": [
+    "w-full w-fit"
+   ],
+   "expected": "w-fit"
+  },
+  {
+   "args": [
+    "overflow-x-auto overflow-x-hidden overflow-x-scroll"
+   ],
+   "expected": "overflow-x-scroll"
+  },
+  {
+   "args": [
+    "overflow-x-auto hover:overflow-x-hidden overflow-x-scroll"
+   ],
+   "expected": "hover:overflow-x-hidden overflow-x-scroll"
+  },
+  {
+   "args": [
+    "overflow-x-auto hover:overflow-x-hidden hover:overflow-x-auto overflow-x-scroll"
+   ],
+   "expected": "hover:overflow-x-auto overflow-x-scroll"
+  },
+  {
+   "args": [
+    "col-span-1 col-span-full"
+   ],
+   "expected": "col-span-full"
+  },
+  {
+   "args": [
+    "gap-2 gap-px basis-px basis-3"
+   ],
+   "expected": "gap-px basis-3"
+  },
+  {
+   "args": [
+    "lining-nums tabular-nums diagonal-fractions"
+   ],
+   "expected": "lining-nums tabular-nums diagonal-fractions"
+  },
+  {
+   "args": [
+    "normal-nums tabular-nums diagonal-fractions"
+   ],
+   "expected": "tabular-nums diagonal-fractions"
+  },
+  {
+   "args": [
+    "tabular-nums diagonal-fractions normal-nums"
+   ],
+   "expected": "normal-nums"
+  },
+  {
+   "args": [
+    "tabular-nums proportional-nums"
+   ],
+   "expected": "proportional-nums"
+  }
+ ],
+ "conflicts-across-class-groups": [
+  {
+   "args": [
+    "inset-1 inset-x-1"
+   ],
+   "expected": "inset-1 inset-x-1"
+  },
+  {
+   "args": [
+    "inset-x-1 inset-1"
+   ],
+   "expected": "inset-1"
+  },
+  {
+   "args": [
+    "inset-x-1 left-1 inset-1"
+   ],
+   "expected": "inset-1"
+  },
+  {
+   "args": [
+    "inset-x-1 inset-1 left-1"
+   ],
+   "expected": "inset-1 left-1"
+  },
+  {
+   "args": [
+    "inset-x-1 right-1 inset-1"
+   ],
+   "expected": "inset-1"
+  },
+  {
+   "args": [
+    "inset-x-1 right-1 inset-x-1"
+   ],
+   "expected": "inset-x-1"
+  },
+  {
+   "args": [
+    "inset-x-1 right-1 inset-y-1"
+   ],
+   "expected": "inset-x-1 right-1 inset-y-1"
+  },
+  {
+   "args": [
+    "right-1 inset-x-1 inset-y-1"
+   ],
+   "expected": "inset-x-1 inset-y-1"
+  },
+  {
+   "args": [
+    "inset-x-1 hover:left-1 inset-1"
+   ],
+   "expected": "hover:left-1 inset-1"
+  },
+  {
+   "args": [
+    "ring shadow"
+   ],
+   "expected": "ring shadow"
+  },
+  {
+   "args": [
+    "ring-2 shadow-md"
+   ],
+   "expected": "ring-2 shadow-md"
+  },
+  {
+   "args": [
+    "shadow ring"
+   ],
+   "expected": "shadow ring"
+  },
+  {
+   "args": [
+    "shadow-md ring-2"
+   ],
+   "expected": "shadow-md ring-2"
+  },
+  {
+   "args": [
+    "touch-pan-x touch-pan-right"
+   ],
+   "expected": "touch-pan-right"
+  },
+  {
+   "args": [
+    "touch-none touch-pan-x"
+   ],
+   "expected": "touch-pan-x"
+  },
+  {
+   "args": [
+    "touch-pan-x touch-none"
+   ],
+   "expected": "touch-none"
+  },
+  {
+   "args": [
+    "touch-pan-x touch-pan-y touch-pinch-zoom"
+   ],
+   "expected": "touch-pan-x touch-pan-y touch-pinch-zoom"
+  },
+  {
+   "args": [
+    "touch-manipulation touch-pan-x touch-pan-y touch-pinch-zoom"
+   ],
+   "expected": "touch-pan-x touch-pan-y touch-pinch-zoom"
+  },
+  {
+   "args": [
+    "touch-pan-x touch-pan-y touch-pinch-zoom touch-auto"
+   ],
+   "expected": "touch-auto"
+  },
+  {
+   "args": [
+    "overflow-auto inline line-clamp-1"
+   ],
+   "expected": "line-clamp-1"
+  },
+  {
+   "args": [
+    "line-clamp-1 overflow-auto inline"
+   ],
+   "expected": "line-clamp-1 overflow-auto inline"
+  }
+ ],
+ "colors": [
+  {
+   "args": [
+    "bg-grey-5 bg-hotpink"
+   ],
+   "expected": "bg-hotpink"
+  },
+  {
+   "args": [
+    "hover:bg-grey-5 hover:bg-hotpink"
+   ],
+   "expected": "hover:bg-hotpink"
+  },
+  {
+   "args": [
+    "stroke-[hsl(350_80%_0%)] stroke-[10px]"
+   ],
+   "expected": "stroke-[hsl(350_80%_0%)] stroke-[10px]"
+  }
+ ],
+ "content-utilities": [
+  {
+   "args": [
+    "content-['hello'] content-[attr(data-content)]"
+   ],
+   "expected": "content-[attr(data-content)]"
+  }
+ ],
+ "important-modifier": [
+  {
+   "args": [
+    "font-medium! font-bold!"
+   ],
+   "expected": "font-bold!"
+  },
+  {
+   "args": [
+    "font-medium! font-bold! font-thin"
+   ],
+   "expected": "font-bold! font-thin"
+  },
+  {
+   "args": [
+    "right-2! -inset-x-px!"
+   ],
+   "expected": "-inset-x-px!"
+  },
+  {
+   "args": [
+    "focus:inline! focus:block!"
+   ],
+   "expected": "focus:block!"
+  },
+  {
+   "args": [
+    "[--my-var:20px]! [--my-var:30px]!"
+   ],
+   "expected": "[--my-var:30px]!"
+  },
+  {
+   "args": [
+    "font-medium! !font-bold"
+   ],
+   "expected": "!font-bold"
+  },
+  {
+   "args": [
+    "!font-medium !font-bold"
+   ],
+   "expected": "!font-bold"
+  },
+  {
+   "args": [
+    "!font-medium !font-bold font-thin"
+   ],
+   "expected": "!font-bold font-thin"
+  },
+  {
+   "args": [
+    "!right-2 !-inset-x-px"
+   ],
+   "expected": "!-inset-x-px"
+  },
+  {
+   "args": [
+    "focus:!inline focus:!block"
+   ],
+   "expected": "focus:!block"
+  },
+  {
+   "args": [
+    "![--my-var:20px] ![--my-var:30px]"
+   ],
+   "expected": "![--my-var:30px]"
+  }
+ ],
+ "negative-values": [
+  {
+   "args": [
+    "-m-2 -m-5"
+   ],
+   "expected": "-m-5"
+  },
+  {
+   "args": [
+    "-top-12 -top-2000"
+   ],
+   "expected": "-top-2000"
+  },
+  {
+   "args": [
+    "-m-2 m-auto"
+   ],
+   "expected": "m-auto"
+  },
+  {
+   "args": [
+    "top-12 -top-69"
+   ],
+   "expected": "-top-69"
+  },
+  {
+   "args": [
+    "-right-1 inset-x-1"
+   ],
+   "expected": "inset-x-1"
+  },
+  {
+   "args": [
+    "hover:focus:-right-1 focus:hover:inset-x-1"
+   ],
+   "expected": "focus:hover:inset-x-1"
+  }
+ ],
+ "non-conflicting-classes": [
+  {
+   "args": [
+    "border-t border-white/10"
+   ],
+   "expected": "border-t border-white/10"
+  },
+  {
+   "args": [
+    "border-t border-white"
+   ],
+   "expected": "border-t border-white"
+  },
+  {
+   "args": [
+    "text-3.5xl text-black"
+   ],
+   "expected": "text-3.5xl text-black"
+  }
+ ],
+ "non-tailwind-classes": [
+  {
+   "args": [
+    "non-tailwind-class inline block"
+   ],
+   "expected": "non-tailwind-class block"
+  },
+  {
+   "args": [
+    "inline block inline-1"
+   ],
+   "expected": "block inline-1"
+  },
+  {
+   "args": [
+    "inline block i-inline"
+   ],
+   "expected": "block i-inline"
+  },
+  {
+   "args": [
+    "focus:inline focus:block focus:inline-1"
+   ],
+   "expected": "focus:block focus:inline-1"
+  }
+ ],
+ "per-side-border-colors": [
+  {
+   "args": [
+    "border-t-some-blue border-t-other-blue"
+   ],
+   "expected": "border-t-other-blue"
+  },
+  {
+   "args": [
+    "border-t-some-blue border-some-blue"
+   ],
+   "expected": "border-some-blue"
+  },
+  {
+   "args": [
+    "border-some-blue border-s-some-blue"
+   ],
+   "expected": "border-some-blue border-s-some-blue"
+  },
+  {
+   "args": [
+    "border-e-some-blue border-some-blue"
+   ],
+   "expected": "border-some-blue"
+  }
+ ],
+ "pseudo-variants": [
+  {
+   "args": [
+    "empty:p-2 empty:p-3"
+   ],
+   "expected": "empty:p-3"
+  },
+  {
+   "args": [
+    "hover:empty:p-2 hover:empty:p-3"
+   ],
+   "expected": "hover:empty:p-3"
+  },
+  {
+   "args": [
+    "read-only:p-2 read-only:p-3"
+   ],
+   "expected": "read-only:p-3"
+  },
+  {
+   "args": [
+    "group-empty:p-2 group-empty:p-3"
+   ],
+   "expected": "group-empty:p-3"
+  },
+  {
+   "args": [
+    "peer-empty:p-2 peer-empty:p-3"
+   ],
+   "expected": "peer-empty:p-3"
+  },
+  {
+   "args": [
+    "group-empty:p-2 peer-empty:p-3"
+   ],
+   "expected": "group-empty:p-2 peer-empty:p-3"
+  },
+  {
+   "args": [
+    "hover:group-empty:p-2 hover:group-empty:p-3"
+   ],
+   "expected": "hover:group-empty:p-3"
+  },
+  {
+   "args": [
+    "group-read-only:p-2 group-read-only:p-3"
+   ],
+   "expected": "group-read-only:p-3"
+  }
+ ],
+ "standalone-classes": [
+  {
+   "args": [
+    "inline block"
+   ],
+   "expected": "block"
+  },
+  {
+   "args": [
+    "hover:block hover:inline"
+   ],
+   "expected": "hover:inline"
+  },
+  {
+   "args": [
+    "hover:block hover:block"
+   ],
+   "expected": "hover:block"
+  },
+  {
+   "args": [
+    "inline hover:inline focus:inline hover:block hover:focus:block"
+   ],
+   "expected": "inline focus:inline hover:block hover:focus:block"
+  },
+  {
+   "args": [
+    "underline line-through"
+   ],
+   "expected": "line-through"
+  },
+  {
+   "args": [
+    "line-through no-underline"
+   ],
+   "expected": "no-underline"
+  }
+ ],
+ "tailwind-css-versions": [
+  {
+   "args": [
+    "text-red text-lg/7 text-lg/8"
+   ],
+   "expected": "text-red text-lg/8"
+  },
+  {
+   "args": [
+    "start-0 start-1",
+    "end-0 end-1",
+    "ps-0 ps-1 pe-0 pe-1",
+    "ms-0 ms-1 me-0 me-1",
+    "rounded-s-sm rounded-s-md rounded-e-sm rounded-e-md",
+    "rounded-ss-sm rounded-ss-md rounded-ee-sm rounded-ee-md"
+   ],
+   "expected": "start-1 end-1 ps-1 pe-1 ms-1 me-1 rounded-s-md rounded-e-md rounded-ss-md rounded-ee-md"
+  },
+  {
+   "args": [
+    "start-0 end-0 inset-0 ps-0 pe-0 p-0 ms-0 me-0 m-0 rounded-ss rounded-es rounded-s"
+   ],
+   "expected": "inset-0 p-0 m-0 rounded-s"
+  },
+  {
+   "args": [
+    "hyphens-auto hyphens-manual"
+   ],
+   "expected": "hyphens-manual"
+  },
+  {
+   "args": [
+    "from-0% from-10% from-[12.5%] via-0% via-10% via-[12.5%] to-0% to-10% to-[12.5%]"
+   ],
+   "expected": "from-[12.5%] via-[12.5%] to-[12.5%]"
+  },
+  {
+   "args": [
+    "from-0% from-red"
+   ],
+   "expected": "from-0% from-red"
+  },
+  {
+   "args": [
+    "list-image-none list-image-[url(./my-image.png)] list-image-[var(--value)]"
+   ],
+   "expected": "list-image-[var(--value)]"
+  },
+  {
+   "args": [
+    "caption-top caption-bottom"
+   ],
+   "expected": "caption-bottom"
+  },
+  {
+   "args": [
+    "line-clamp-2 line-clamp-none line-clamp-[10]"
+   ],
+   "expected": "line-clamp-[10]"
+  },
+  {
+   "args": [
+    "delay-150 delay-0 duration-150 duration-0"
+   ],
+   "expected": "delay-0 duration-0"
+  },
+  {
+   "args": [
+    "justify-normal justify-center justify-stretch"
+   ],
+   "expected": "justify-stretch"
+  },
+  {
+   "args": [
+    "content-normal content-center content-stretch"
+   ],
+   "expected": "content-stretch"
+  },
+  {
+   "args": [
+    "whitespace-nowrap whitespace-break-spaces"
+   ],
+   "expected": "whitespace-break-spaces"
+  },
+  {
+   "args": [
+    "h-svh h-dvh w-svw w-dvw"
+   ],
+   "expected": "h-dvh w-dvw"
+  },
+  {
+   "args": [
+    "has-[[data-potato]]:p-1 has-[[data-potato]]:p-2 group-has-[:checked]:grid group-has-[:checked]:flex"
+   ],
+   "expected": "has-[[data-potato]]:p-2 group-has-[:checked]:flex"
+  },
+  {
+   "args": [
+    "text-wrap text-pretty"
+   ],
+   "expected": "text-pretty"
+  },
+  {
+   "args": [
+    "w-5 h-3 size-10 w-12"
+   ],
+   "expected": "size-10 w-12"
+  },
+  {
+   "args": [
+    "grid-cols-2 grid-cols-subgrid grid-rows-5 grid-rows-subgrid"
+   ],
+   "expected": "grid-cols-subgrid grid-rows-subgrid"
+  },
+  {
+   "args": [
+    "min-w-0 min-w-50 min-w-px max-w-0 max-w-50 max-w-px"
+   ],
+   "expected": "min-w-px max-w-px"
+  },
+  {
+   "args": [
+    "forced-color-adjust-none forced-color-adjust-auto"
+   ],
+   "expected": "forced-color-adjust-auto"
+  },
+  {
+   "args": [
+    "appearance-none appearance-auto"
+   ],
+   "expected": "appearance-auto"
+  },
+  {
+   "args": [
+    "float-start float-end clear-start clear-end"
+   ],
+   "expected": "float-end clear-end"
+  },
+  {
+   "args": [
+    "*:p-10 *:p-20 hover:*:p-10 hover:*:p-20"
+   ],
+   "expected": "*:p-20 hover:*:p-20"
+  },
+  {
+   "args": [
+    "transform-3d transform-flat"
+   ],
+   "expected": "transform-flat"
+  },
+  {
+   "args": [
+    "rotate-12 rotate-x-2 rotate-none rotate-y-3"
+   ],
+   "expected": "rotate-x-2 rotate-none rotate-y-3"
+  },
+  {
+   "args": [
+    "perspective-dramatic perspective-none perspective-midrange"
+   ],
+   "expected": "perspective-midrange"
+  },
+  {
+   "args": [
+    "perspective-origin-center perspective-origin-top-left"
+   ],
+   "expected": "perspective-origin-top-left"
+  },
+  {
+   "args": [
+    "bg-linear-to-r bg-linear-45"
+   ],
+   "expected": "bg-linear-45"
+  },
+  {
+   "args": [
+    "bg-linear-to-r bg-radial-[something] bg-conic-10"
+   ],
+   "expected": "bg-conic-10"
+  },
+  {
+   "args": [
+    "ring-4 ring-orange inset-ring inset-ring-3 inset-ring-blue"
+   ],
+   "expected": "ring-4 ring-orange inset-ring-3 inset-ring-blue"
+  },
+  {
+   "args": [
+    "field-sizing-content field-sizing-fixed"
+   ],
+   "expected": "field-sizing-fixed"
+  },
+  {
+   "args": [
+    "scheme-normal scheme-dark"
+   ],
+   "expected": "scheme-dark"
+  },
+  {
+   "args": [
+    "font-stretch-expanded font-stretch-[66.66%] font-stretch-50%"
+   ],
+   "expected": "font-stretch-50%"
+  },
+  {
+   "args": [
+    "col-span-full col-2 row-span-3 row-4"
+   ],
+   "expected": "col-2 row-4"
+  },
+  {
+   "args": [
+    "via-red-500 via-(--mobile-header-gradient)"
+   ],
+   "expected": "via-(--mobile-header-gradient)"
+  },
+  {
+   "args": [
+    "via-red-500 via-(length:--mobile-header-gradient)"
+   ],
+   "expected": "via-red-500 via-(length:--mobile-header-gradient)"
+  },
+  {
+   "args": [
+    "items-baseline items-baseline-last"
+   ],
+   "expected": "items-baseline-last"
+  },
+  {
+   "args": [
+    "self-baseline self-baseline-last"
+   ],
+   "expected": "self-baseline-last"
+  },
+  {
+   "args": [
+    "place-content-center place-content-end-safe place-content-center-safe"
+   ],
+   "expected": "place-content-center-safe"
+  },
+  {
+   "args": [
+    "items-center-safe items-baseline items-end-safe"
+   ],
+   "expected": "items-end-safe"
+  },
+  {
+   "args": [
+    "wrap-break-word wrap-normal wrap-anywhere"
+   ],
+   "expected": "wrap-anywhere"
+  },
+  {
+   "args": [
+    "text-shadow-none text-shadow-2xl"
+   ],
+   "expected": "text-shadow-2xl"
+  },
+  {
+   "args": [
+    "text-shadow-none text-shadow-md text-shadow-red text-shadow-red-500 shadow-red shadow-3xs"
+   ],
+   "expected": "text-shadow-md text-shadow-red-500 shadow-red shadow-3xs"
+  },
+  {
+   "args": [
+    "mask-add mask-subtract"
+   ],
+   "expected": "mask-subtract"
+  },
+  {
+   "args": [
+    "mask-(--foo) mask-[foo] mask-none",
+    "mask-linear-1 mask-linear-2",
+    "mask-linear-from-[position:test] mask-linear-from-3",
+    "mask-linear-to-[position:test] mask-linear-to-3",
+    "mask-linear-from-color-red mask-linear-from-color-3",
+    "mask-linear-to-color-red mask-linear-to-color-3",
+    "mask-t-from-[position:test] mask-t-from-3",
+    "mask-t-to-[position:test] mask-t-to-3",
+    "mask-t-from-color-red mask-t-from-color-3",
+    "mask-radial-(--test) mask-radial-[test]",
+    "mask-radial-from-[position:test] mask-radial-from-3",
+    "mask-radial-to-[position:test] mask-radial-to-3",
+    "mask-radial-from-color-red mask-radial-from-color-3"
+   ],
+   "expected": "mask-none mask-linear-2 mask-linear-from-3 mask-linear-to-3 mask-linear-from-color-3 mask-linear-to-color-3 mask-t-from-3 mask-t-to-3 mask-t-from-color-3 mask-radial-[test] mask-radial-from-3 mask-radial-to-3 mask-radial-from-color-3"
+  },
+  {
+   "args": [
+    "mask-(--something) mask-[something]",
+    "mask-top-left mask-center mask-(position:--var) mask-[position:1px_1px] mask-position-(--var) mask-position-[1px_1px]"
+   ],
+   "expected": "mask-[something] mask-position-[1px_1px]"
+  },
+  {
+   "args": [
+    "mask-(--something) mask-[something]",
+    "mask-auto mask-[size:foo] mask-(size:--foo) mask-size-[foo] mask-size-(--foo) mask-cover mask-contain"
+   ],
+   "expected": "mask-[something] mask-contain"
+  },
+  {
+   "args": [
+    "mask-type-luminance mask-type-alpha"
+   ],
+   "expected": "mask-type-alpha"
+  },
+  {
+   "args": [
+    "shadow-md shadow-lg/25 text-shadow-md text-shadow-lg/25"
+   ],
+   "expected": "shadow-lg/25 text-shadow-lg/25"
+  },
+  {
+   "args": [
+    "drop-shadow-some-color drop-shadow-[#123456] drop-shadow-lg drop-shadow-[10px_0]"
+   ],
+   "expected": "drop-shadow-[#123456] drop-shadow-[10px_0]"
+  },
+  {
+   "args": [
+    "drop-shadow-[#123456] drop-shadow-some-color"
+   ],
+   "expected": "drop-shadow-some-color"
+  },
+  {
+   "args": [
+    "drop-shadow-2xl drop-shadow-[shadow:foo]"
+   ],
+   "expected": "drop-shadow-[shadow:foo]"
+  },
+  {
+   "args": [
+    "h-12 h-lh"
+   ],
+   "expected": "h-lh"
+  },
+  {
+   "args": [
+    "min-h-12 min-h-lh"
+   ],
+   "expected": "min-h-lh"
+  },
+  {
+   "args": [
+    "max-h-12 max-h-lh"
+   ],
+   "expected": "max-h-lh"
+  },
+  {
+   "args": [
+    "inset-s-1 inset-s-2"
+   ],
+   "expected": "inset-s-2"
+  },
+  {
+   "args": [
+    "inset-e-1 inset-e-2"
+   ],
+   "expected": "inset-e-2"
+  },
+  {
+   "args": [
+    "inset-bs-1 inset-bs-2"
+   ],
+   "expected": "inset-bs-2"
+  },
+  {
+   "args": [
+    "inset-be-1 inset-be-2"
+   ],
+   "expected": "inset-be-2"
+  },
+  {
+   "args": [
+    "start-1 inset-s-2"
+   ],
+   "expected": "inset-s-2"
+  },
+  {
+   "args": [
+    "inset-s-1 start-2"
+   ],
+   "expected": "start-2"
+  },
+  {
+   "args": [
+    "end-1 inset-e-2"
+   ],
+   "expected": "inset-e-2"
+  },
+  {
+   "args": [
+    "inset-e-1 end-2"
+   ],
+   "expected": "end-2"
+  },
+  {
+   "args": [
+    "inset-s-1 inset-e-2 inset-bs-3 inset-be-4 inset-0"
+   ],
+   "expected": "inset-0"
+  },
+  {
+   "args": [
+    "inset-0 inset-s-1 inset-bs-1"
+   ],
+   "expected": "inset-0 inset-s-1 inset-bs-1"
+  },
+  {
+   "args": [
+    "inset-y-1 inset-bs-2 inset-be-3"
+   ],
+   "expected": "inset-y-1 inset-bs-2 inset-be-3"
+  },
+  {
+   "args": [
+    "top-1 inset-bs-2 bottom-3 inset-be-4"
+   ],
+   "expected": "top-1 inset-bs-2 bottom-3 inset-be-4"
+  },
+  {
+   "args": [
+    "pbs-1 pbs-2"
+   ],
+   "expected": "pbs-2"
+  },
+  {
+   "args": [
+    "pbe-1 pbe-2"
+   ],
+   "expected": "pbe-2"
+  },
+  {
+   "args": [
+    "mbs-1 mbs-2"
+   ],
+   "expected": "mbs-2"
+  },
+  {
+   "args": [
+    "mbe-1 mbe-2"
+   ],
+   "expected": "mbe-2"
+  },
+  {
+   "args": [
+    "pt-1 pbs-2"
+   ],
+   "expected": "pt-1 pbs-2"
+  },
+  {
+   "args": [
+    "pb-1 pbe-2"
+   ],
+   "expected": "pb-1 pbe-2"
+  },
+  {
+   "args": [
+    "mt-1 mbs-2"
+   ],
+   "expected": "mt-1 mbs-2"
+  },
+  {
+   "args": [
+    "mb-1 mbe-2"
+   ],
+   "expected": "mb-1 mbe-2"
+  },
+  {
+   "args": [
+    "p-0 pbs-1 pbe-1"
+   ],
+   "expected": "p-0 pbs-1 pbe-1"
+  },
+  {
+   "args": [
+    "pbs-1 pbe-1 p-0"
+   ],
+   "expected": "p-0"
+  },
+  {
+   "args": [
+    "m-0 mbs-1 mbe-1"
+   ],
+   "expected": "m-0 mbs-1 mbe-1"
+  },
+  {
+   "args": [
+    "mbs-1 mbe-1 m-0"
+   ],
+   "expected": "m-0"
+  },
+  {
+   "args": [
+    "py-1 pbs-2 pbe-3"
+   ],
+   "expected": "py-1 pbs-2 pbe-3"
+  },
+  {
+   "args": [
+    "my-1 mbs-2 mbe-3"
+   ],
+   "expected": "my-1 mbs-2 mbe-3"
+  },
+  {
+   "args": [
+    "scroll-pbs-1 scroll-pbs-2"
+   ],
+   "expected": "scroll-pbs-2"
+  },
+  {
+   "args": [
+    "scroll-pbe-1 scroll-pbe-2"
+   ],
+   "expected": "scroll-pbe-2"
+  },
+  {
+   "args": [
+    "scroll-mbs-1 scroll-mbs-2"
+   ],
+   "expected": "scroll-mbs-2"
+  },
+  {
+   "args": [
+    "scroll-mbe-1 scroll-mbe-2"
+   ],
+   "expected": "scroll-mbe-2"
+  },
+  {
+   "args": [
+    "scroll-pt-1 scroll-pbs-2"
+   ],
+   "expected": "scroll-pt-1 scroll-pbs-2"
+  },
+  {
+   "args": [
+    "scroll-pb-1 scroll-pbe-2"
+   ],
+   "expected": "scroll-pb-1 scroll-pbe-2"
+  },
+  {
+   "args": [
+    "scroll-mt-1 scroll-mbs-2"
+   ],
+   "expected": "scroll-mt-1 scroll-mbs-2"
+  },
+  {
+   "args": [
+    "scroll-mb-1 scroll-mbe-2"
+   ],
+   "expected": "scroll-mb-1 scroll-mbe-2"
+  },
+  {
+   "args": [
+    "scroll-p-0 scroll-pbs-1 scroll-pbe-1"
+   ],
+   "expected": "scroll-p-0 scroll-pbs-1 scroll-pbe-1"
+  },
+  {
+   "args": [
+    "scroll-pbs-1 scroll-pbe-1 scroll-p-0"
+   ],
+   "expected": "scroll-p-0"
+  },
+  {
+   "args": [
+    "scroll-m-0 scroll-mbs-1 scroll-mbe-1"
+   ],
+   "expected": "scroll-m-0 scroll-mbs-1 scroll-mbe-1"
+  },
+  {
+   "args": [
+    "scroll-mbs-1 scroll-mbe-1 scroll-m-0"
+   ],
+   "expected": "scroll-m-0"
+  },
+  {
+   "args": [
+    "scroll-py-1 scroll-pbs-2 scroll-pbe-3"
+   ],
+   "expected": "scroll-py-1 scroll-pbs-2 scroll-pbe-3"
+  },
+  {
+   "args": [
+    "scroll-my-1 scroll-mbs-2 scroll-mbe-3"
+   ],
+   "expected": "scroll-my-1 scroll-mbs-2 scroll-mbe-3"
+  },
+  {
+   "args": [
+    "border-bs-1 border-bs-2"
+   ],
+   "expected": "border-bs-2"
+  },
+  {
+   "args": [
+    "border-be-1 border-be-2"
+   ],
+   "expected": "border-be-2"
+  },
+  {
+   "args": [
+    "border-bs-red border-bs-blue"
+   ],
+   "expected": "border-bs-blue"
+  },
+  {
+   "args": [
+    "border-be-red border-be-blue"
+   ],
+   "expected": "border-be-blue"
+  },
+  {
+   "args": [
+    "border-2 border-bs-4 border-be-6"
+   ],
+   "expected": "border-2 border-bs-4 border-be-6"
+  },
+  {
+   "args": [
+    "border-bs-4 border-be-6 border-2"
+   ],
+   "expected": "border-2"
+  },
+  {
+   "args": [
+    "border-red border-bs-blue border-be-green"
+   ],
+   "expected": "border-red border-bs-blue border-be-green"
+  },
+  {
+   "args": [
+    "border-bs-blue border-be-green border-red"
+   ],
+   "expected": "border-red"
+  },
+  {
+   "args": [
+    "border-y-2 border-bs-4 border-be-6"
+   ],
+   "expected": "border-y-2 border-bs-4 border-be-6"
+  },
+  {
+   "args": [
+    "border-t-2 border-bs-4 border-b-6 border-be-8"
+   ],
+   "expected": "border-t-2 border-bs-4 border-b-6 border-be-8"
+  },
+  {
+   "args": [
+    "border-y-red border-bs-blue border-be-green"
+   ],
+   "expected": "border-y-red border-bs-blue border-be-green"
+  },
+  {
+   "args": [
+    "inline-1/2 inline-3/4"
+   ],
+   "expected": "inline-3/4"
+  },
+  {
+   "args": [
+    "block-1/2 block-3/4"
+   ],
+   "expected": "block-3/4"
+  },
+  {
+   "args": [
+    "min-inline-auto min-inline-full"
+   ],
+   "expected": "min-inline-full"
+  },
+  {
+   "args": [
+    "max-inline-none max-inline-10"
+   ],
+   "expected": "max-inline-10"
+  },
+  {
+   "args": [
+    "min-block-auto min-block-lh min-block-10"
+   ],
+   "expected": "min-block-10"
+  },
+  {
+   "args": [
+    "max-block-none max-block-lh max-block-10"
+   ],
+   "expected": "max-block-10"
+  },
+  {
+   "args": [
+    "w-10 inline-20"
+   ],
+   "expected": "w-10 inline-20"
+  },
+  {
+   "args": [
+    "h-10 block-20"
+   ],
+   "expected": "h-10 block-20"
+  },
+  {
+   "args": [
+    "size-10 inline-20 block-30"
+   ],
+   "expected": "size-10 inline-20 block-30"
+  },
+  {
+   "args": [
+    "min-w-10 min-inline-20"
+   ],
+   "expected": "min-w-10 min-inline-20"
+  },
+  {
+   "args": [
+    "max-h-10 max-block-20"
+   ],
+   "expected": "max-h-10 max-block-20"
+  },
+  {
+   "args": [
+    "font-features-[\"smcp\"] font-features-[\"onum\"]"
+   ],
+   "expected": "font-features-[\"onum\"]"
+  },
+  {
+   "args": [
+    "font-features-[var(--font-features)] font-features-[\"liga\",\"dlig\"]"
+   ],
+   "expected": "font-features-[\"liga\",\"dlig\"]"
+  },
+  {
+   "args": [
+    "tabular-nums font-features-[\"smcp\"]"
+   ],
+   "expected": "tabular-nums font-features-[\"smcp\"]"
+  },
+  {
+   "args": [
+    "font-features-[\"smcp\"] normal-nums"
+   ],
+   "expected": "font-features-[\"smcp\"] normal-nums"
+  },
+  {
+   "args": [
+    "font-sans font-features-[\"smcp\"]"
+   ],
+   "expected": "font-sans font-features-[\"smcp\"]"
+  },
+  {
+   "args": [
+    "aspect-8/11 aspect-8.5/11"
+   ],
+   "expected": "aspect-8.5/11"
+  },
+  {
+   "args": [
+    "w-8/11 w-8.5/11"
+   ],
+   "expected": "w-8.5/11"
+  },
+  {
+   "args": [
+    "inset-1/2 inset-1.25/2.5"
+   ],
+   "expected": "inset-1.25/2.5"
+  },
+  {
+   "args": [
+    "scrollbar-auto scrollbar-thin scrollbar-none"
+   ],
+   "expected": "scrollbar-none"
+  },
+  {
+   "args": [
+    "scrollbar-gutter-auto scrollbar-gutter-stable scrollbar-gutter-both"
+   ],
+   "expected": "scrollbar-gutter-both"
+  },
+  {
+   "args": [
+    "scrollbar-thumb-red-500 scrollbar-thumb-blue-500"
+   ],
+   "expected": "scrollbar-thumb-blue-500"
+  },
+  {
+   "args": [
+    "scrollbar-thumb-red-500 scrollbar-thumb-red-500/50"
+   ],
+   "expected": "scrollbar-thumb-red-500/50"
+  },
+  {
+   "args": [
+    "scrollbar-thumb-[#0088cc] scrollbar-thumb-(--thumb-color)"
+   ],
+   "expected": "scrollbar-thumb-(--thumb-color)"
+  },
+  {
+   "args": [
+    "scrollbar-track-red-500 scrollbar-track-blue-500"
+   ],
+   "expected": "scrollbar-track-blue-500"
+  },
+  {
+   "args": [
+    "scrollbar-track-red-500 scrollbar-track-[color:var(--track-color)]"
+   ],
+   "expected": "scrollbar-track-[color:var(--track-color)]"
+  },
+  {
+   "args": [
+    "scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-blue-500"
+   ],
+   "expected": "scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-blue-500"
+  },
+  {
+   "args": [
+    "@container @container-normal @container-size"
+   ],
+   "expected": "@container-size"
+  },
+  {
+   "args": [
+    "@container-[inline-size] @container-(--container-type)"
+   ],
+   "expected": "@container-(--container-type)"
+  },
+  {
+   "args": [
+    "@container @container-size/sidebar"
+   ],
+   "expected": "@container-size/sidebar"
+  },
+  {
+   "args": [
+    "@container-normal @container-size/sidebar"
+   ],
+   "expected": "@container-size/sidebar"
+  },
+  {
+   "args": [
+    "@container-size/sidebar @container"
+   ],
+   "expected": "@container-size/sidebar @container"
+  },
+  {
+   "args": [
+    "@container/sidebar @container-normal"
+   ],
+   "expected": "@container/sidebar @container-normal"
+  },
+  {
+   "args": [
+    "@container/sidebar @container-normal/sidebar @container-size/content"
+   ],
+   "expected": "@container-size/content"
+  },
+  {
+   "args": [
+    "@container/sidebar @container-normal/content @container-size"
+   ],
+   "expected": "@container-normal/content @container-size"
+  },
+  {
+   "args": [
+    "@container-size @container/sidebar"
+   ],
+   "expected": "@container/sidebar"
+  },
+  {
+   "args": [
+    "@container-size/[sidebar] @container-normal/(--container-name)"
+   ],
+   "expected": "@container-normal/(--container-name)"
+  },
+  {
+   "args": [
+    "hover:@container hover:@container-size/sidebar"
+   ],
+   "expected": "hover:@container-size/sidebar"
+  },
+  {
+   "args": [
+    "hover:@container-size/sidebar hover:@container"
+   ],
+   "expected": "hover:@container-size/sidebar hover:@container"
+  },
+  {
+   "args": [
+    "@container! @container-size/sidebar!"
+   ],
+   "expected": "@container-size/sidebar!"
+  },
+  {
+   "args": [
+    "@container-size/sidebar! @container!"
+   ],
+   "expected": "@container-size/sidebar! @container!"
+  },
+  {
+   "args": [
+    "@container-foo/sidebar @container-size/sidebar"
+   ],
+   "expected": "@container-foo/sidebar @container-size/sidebar"
+  },
+  {
+   "args": [
+    "zoom-50 zoom-100"
+   ],
+   "expected": "zoom-100"
+  },
+  {
+   "args": [
+    "zoom-100 zoom-[var(--zoom)]"
+   ],
+   "expected": "zoom-[var(--zoom)]"
+  },
+  {
+   "args": [
+    "zoom-[1.5] zoom-(--zoom)"
+   ],
+   "expected": "zoom-(--zoom)"
+  },
+  {
+   "args": [
+    "zoom-50 scale-125"
+   ],
+   "expected": "zoom-50 scale-125"
+  },
+  {
+   "args": [
+    "tab-2 tab-8"
+   ],
+   "expected": "tab-8"
+  },
+  {
+   "args": [
+    "tab-8 tab-[12px]"
+   ],
+   "expected": "tab-[12px]"
+  },
+  {
+   "args": [
+    "tab-[3] tab-(--tab-size)"
+   ],
+   "expected": "tab-(--tab-size)"
+  },
+  {
+   "args": [
+    "tab-4 tabular-nums"
+   ],
+   "expected": "tab-4 tabular-nums"
+  }
+ ],
+ "wonky-inputs": [
+  {
+   "args": [
+    " block"
+   ],
+   "expected": "block"
+  },
+  {
+   "args": [
+    "block "
+   ],
+   "expected": "block"
+  },
+  {
+   "args": [
+    " block "
+   ],
+   "expected": "block"
+  },
+  {
+   "args": [
+    "  block  px-2     py-4  "
+   ],
+   "expected": "block px-2 py-4"
+  },
+  {
+   "args": [
+    "  block  px-2",
+    " ",
+    "     py-4  "
+   ],
+   "expected": "block px-2 py-4"
+  },
+  {
+   "args": [
+    "block\npx-2"
+   ],
+   "expected": "block px-2"
+  },
+  {
+   "args": [
+    "\nblock\npx-2\n"
+   ],
+   "expected": "block px-2"
+  },
+  {
+   "args": [
+    "  block\n        \n        px-2   \n          py-4  "
+   ],
+   "expected": "block px-2 py-4"
+  },
+  {
+   "args": [
+    "\r  block\n\r        \n        px-2   \n          py-4  "
+   ],
+   "expected": "block px-2 py-4"
+  }
+ ]
+}
