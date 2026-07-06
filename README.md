@@ -13,7 +13,7 @@ Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflict
 Laravel glue ships in the box, so it's **ready for Laravel** too. The name `tailwind-merge-php` is deliberate: this is a framework-agnostic PHP package first, and a Laravel plugin second.
 
 - **Tailwind CSS v4 only.** (to v4.3) No legacy v3 config (no custom separators, TW3 theme keys, etc.). The v3-style leading `!` important modifier is still parsed, matching upstream.
-- **Fast.** Class-map trie built once per instance, native string functions on the hot path, in-process LRU result cache. Roughly 50× faster than [`gehrisandro/tailwind-merge-php`](https://github.com/gehrisandro/tailwind-merge-php) on the same real-world class lists even with the cache disabled, far more with a warm cache (note: that port targets Tailwind v3, this one v4).
+- **Fast.** Class-map trie built once per instance, native string functions on the hot path, in-process LRU result cache. Roughly 50× faster than [`gehrisandro/tailwind-merge-php`](https://github.com/gehrisandro/tailwind-merge-php) on the same real-world class lists even with the cache disabled, far more with a warm cache (note: that port targets Tailwind v3, this one v4). The benchmark itself was deliberately removed from the repo — it isn't part of the shipped package or the test contract.
 - **Defensive.** `strict_types`, final classes, PHPStan level max, invalid config keys and non-string class list entries rejected with `InvalidArgumentException`.
 - **Test-based.** The behavior contract is the upstream JS test suite: 371 tests / ~1,900 assertions, including 323 merge cases extracted from and verified against the real `tailwind-merge` npm package v3.6.0 (which targets Tailwind CSS v4).
 
