@@ -1,6 +1,6 @@
 # tailwind-merge-php
 
-Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflicts — a fast PHP port of [dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge).
+Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflicts — a fast, independent PHP port of [dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge), ported directly from the JS source and not a fork of any existing PHP package.
 
 If you are building a complex UI — you should componentize. And if you are using Tailwind and componentizing — you need Tailwind Merge.
 
@@ -38,6 +38,31 @@ $tw = TailwindMerge::create([
 
 // Or a fully custom config (see DefaultConfig::config() for the shape)
 $tw = new TailwindMerge($fullConfig);
+```
+
+## Laravel
+
+Framework glue ships in the box and is auto-discovered — no manual provider
+registration. Install `illuminate/support` (already present in any Laravel app).
+
+```blade
+{{-- Blade directive --}}
+<div class="@twMerge('px-2 p-4', $isActive ? 'bg-blue-500' : 'bg-gray-200')">…</div>
+```
+
+```php
+use Stamat\TailwindMerge\Laravel\Facades\TwMerge;
+use Stamat\TailwindMerge\TailwindMerge;
+
+TwMerge::merge('px-2 p-4', 'bg-red');   // facade
+app(TailwindMerge::class)->merge(...);   // or resolve from the container
+```
+
+The container binds a single shared, configured instance. Publish the config to
+tune `cacheSize`, `prefix`, `extend` and `override`:
+
+```sh
+php artisan vendor:publish --tag=tailwind-merge
 ```
 
 ## Development

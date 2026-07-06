@@ -13,9 +13,13 @@
         "php": "^8.2"
     },
     "require-dev": {
+        "illuminate/support": "^10.0|^11.0|^12.0",
         "laravel/pint": "^1.13",
         "pestphp/pest": "^4.0",
         "phpstan/phpstan": "^2.1"
+    },
+    "suggest": {
+        "illuminate/support": "Enables the Laravel service provider, @twMerge Blade directive and TwMerge facade (auto-discovered)."
     },
     "autoload": {
         "psr-4": {
@@ -31,6 +35,16 @@
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stamat\\TailwindMerge\\Laravel\\TailwindMergeServiceProvider"
+            ],
+            "aliases": {
+                "TwMerge": "Stamat\\TailwindMerge\\Laravel\\Facades\\TwMerge"
+            }
         }
     },
     "scripts": {
