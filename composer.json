@@ -13,6 +13,8 @@
         "php": "^8.2"
     },
     "require-dev": {
+        "illuminate/config": "^10.0|^11.0|^12.0",
+        "illuminate/container": "^10.0|^11.0|^12.0",
         "illuminate/support": "^10.0|^11.0|^12.0",
         "laravel/pint": "^1.13",
         "pestphp/pest": "^3.0 || ^4.0",
