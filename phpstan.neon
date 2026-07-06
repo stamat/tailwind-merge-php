@@ -2,3 +2,8 @@ parameters:
     level: max
     paths:
         - src
+    ignoreErrors:
+        # config() ships in illuminate/foundation, present at runtime in any Laravel
+        # app; not pulled as a dev dep (illuminate/support alone covers the bridge).
+        - message: '#^Function config not found\.$#'
+          path: src/Laravel/TailwindMergeServiceProvider.php

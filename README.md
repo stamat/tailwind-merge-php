@@ -1,5 +1,11 @@
 # tailwind-merge-php
 
+[![Packagist Version](https://img.shields.io/packagist/v/stamat/tailwind-merge-php)](https://packagist.org/packages/stamat/tailwind-merge-php)
+[![PHP Version](https://img.shields.io/packagist/php-v/stamat/tailwind-merge-php)](https://packagist.org/packages/stamat/tailwind-merge-php)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8)](https://tailwindcss.com)
+[![CI](https://github.com/stamat/tailwind-merge-php/actions/workflows/ci.yml/badge.svg)](https://github.com/stamat/tailwind-merge-php/actions/workflows/ci.yml)
+[![License](https://img.shields.io/packagist/l/stamat/tailwind-merge-php)](LICENSE)
+
 Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflicts — a fast, independent PHP port of [dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge), ported directly from the JS source and not a fork of any existing PHP package.
 
 If you are building a complex UI — you should componentize. And if you are using Tailwind and componentizing — you need Tailwind Merge.
@@ -8,6 +14,25 @@ If you are building a complex UI — you should componentize. And if you are usi
 - **Fast.** Class-map trie built once per instance, native string functions on the hot path, in-process LRU result cache. Roughly 50× faster than [`gehrisandro/tailwind-merge-php`](https://github.com/gehrisandro/tailwind-merge-php) on the same real-world class lists even with the cache disabled, far more with a warm cache (note: that port targets Tailwind v3, this one v4).
 - **Defensive.** `strict_types`, final classes, PHPStan level max, invalid config keys and non-string class list entries rejected with `InvalidArgumentException`.
 - **Test-based.** The behavior contract is the upstream JS test suite: 371 tests / ~1,900 assertions, including 323 merge cases extracted from and verified against the real `tailwind-merge` v3.6.0.
+
+## Why another PHP port?
+
+The PHP ecosystem has several `tailwind-merge` ports. The most-installed one is still on **Tailwind v3**; a few target v4. Here is the landscape (general-purpose PHP ports, downloads as of July 2026):
+
+| Package | Tailwind | Latest release | Runtime deps |
+| --- | --- | --- | --- |
+| **`stamat/tailwind-merge-php`** (this) | **v4** | active | **none** (`php ^8.2`) |
+| [`gehrisandro/tailwind-merge-php`](https://github.com/gehrisandro/tailwind-merge-php) — 1.8M installs | v3.0–3.4 | 2026-03 | none |
+| [`tales-from-a-dev/tailwind-merge-php`](https://github.com/tales-from-a-dev/tailwind-merge-php) — 397k | v4.0–4.3 | 2026-05 | none |
+| [`yieldstudio/tailwind-merge-php`](https://github.com/yieldstudio/tailwind-merge-php) — 75k | v3 | 2023-07 | none |
+| [`devanoxltd/tailwind-class-merge-php`](https://github.com/devanoxltd/tailwind-class-merge-php) | v3.0 | 2026-03 | illuminate |
+
+This one isn't the first v4 port, and it isn't the most installed. What it optimises for:
+
+- **It won't go stale.** `src/DefaultConfig.php` is generated from the upstream JS source, and CI fails the build if it drifts. When Tailwind ships, the config follows — no hand-maintained rule tables to rot.
+- **Zero runtime dependencies.** Just `php ^8.2`. Drop it into anything — plain PHP, Symfony, WordPress, or Laravel (glue auto-discovered, see below).
+- **Held to the upstream contract.** The test suite mirrors dcastil's JS tests, verified against the real `tailwind-merge` — behaviour matches the source of truth, not a re-interpretation of it.
+- **Fast.** Trie-backed matching with an LRU cache — roughly 50× faster than the v3-era `gehrisandro` port on the same class lists (LRU disabled; far more with a warm cache). Different Tailwind targets, so treat it as a real-world comparison, not a controlled micro-benchmark.
 
 ## Usage
 

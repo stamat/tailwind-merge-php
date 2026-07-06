@@ -43,7 +43,7 @@ final class TailwindMergeServiceProvider extends ServiceProvider
         }
 
         // @twMerge('px-2 p-4', $conditional) — resolves the shared, configured instance.
-        Blade::directive('twMerge', static fn (string $expression): string => "<?php echo e(app(\\Stamat\\TailwindMerge\\TailwindMerge::class)->merge($expression)); ?>");
+        Blade::directive('twMerge', static fn(string $expression): string => "<?php echo e(app(\\Stamat\\TailwindMerge\\TailwindMerge::class)->merge($expression)); ?>");
     }
 
     /**

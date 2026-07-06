@@ -1,7 +1,7 @@
 {
     "name": "stamat/tailwind-merge-php",
-    "description": "Merge Tailwind CSS v4 classes without style conflicts. Fast PHP port of tailwind-merge.",
-    "keywords": ["php", "tailwindcss", "tailwind", "merge", "classes"],
+    "description": "Merge Tailwind CSS v4 class lists without style conflicts — a fast, dependency-free PHP port of tailwind-merge. Laravel-ready.",
+    "keywords": ["php", "tailwindcss", "tailwind", "tailwind-css-v4", "tailwind-merge", "merge", "classes", "css", "laravel", "blade"],
     "license": "MIT",
     "authors": [
         {
@@ -49,7 +49,7 @@
     },
     "scripts": {
         "test": "pest --colors=always",
-        "test:types": "phpstan analyse --ansi",
+        "test:types": "phpstan analyse --ansi --memory-limit=1G",
         "lint": "pint -v"
     },
     "minimum-stability": "stable"

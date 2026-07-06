@@ -71,6 +71,8 @@ const emit = (node, level) => {
 
 const config = getDefaultConfig()
 
+const configShape = 'array{cacheSize: int, theme: array<string, list<mixed>>, classGroups: array<string, list<mixed>>, conflictingClassGroups: array<string, list<string>>, conflictingClassGroupModifiers: array<string, list<string>>, postfixLookupClassGroups: list<string>, orderSensitiveModifiers: list<string>}'
+
 const php = `<?php
 
 declare(strict_types=1);
@@ -87,12 +89,13 @@ namespace Stamat\\TailwindMerge;
 final class DefaultConfig
 {
     /**
-     * @return array{cacheSize: int, theme: array<string, list<mixed>>, classGroups: array<string, list<mixed>>, conflictingClassGroups: array<string, list<string>>, conflictingClassGroupModifiers: array<string, list<string>>, postfixLookupClassGroups: list<string>, orderSensitiveModifiers: list<string>}
+     * @return ${configShape}
      */
     public static function config(): array
     {
         // Memoized: the literal rebuilds thousands of first-class-callable Closures per call.
         // Callers mutate only their own copy (PHP arrays are copy-on-write), so sharing is safe.
+        /** @var ${configShape}|null $config */
         static $config = null;
 
         return $config ??= ${emit(config, 2)};

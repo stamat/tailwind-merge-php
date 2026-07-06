@@ -20,6 +20,7 @@ final class DefaultConfig
     {
         // Memoized: the literal rebuilds thousands of first-class-callable Closures per call.
         // Callers mutate only their own copy (PHP arrays are copy-on-write), so sharing is safe.
+        /** @var array{cacheSize: int, theme: array<string, list<mixed>>, classGroups: array<string, list<mixed>>, conflictingClassGroups: array<string, list<string>>, conflictingClassGroupModifiers: array<string, list<string>>, postfixLookupClassGroups: list<string>, orderSensitiveModifiers: list<string>}|null $config */
         static $config = null;
 
         return $config ??= [
