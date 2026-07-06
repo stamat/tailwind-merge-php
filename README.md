@@ -1,9 +1,11 @@
 # tailwind-merge-php
 
-Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflicts — a fast PHP port of [dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge) v3.
+Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflicts — a fast PHP port of [dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge).
+
+If you are building a complex UI — you should componentize. And if you are using Tailwind and componentizing — you need Tailwind Merge.
 
 - **Tailwind CSS v4 only.** No legacy v3 config (no custom separators, TW3 theme keys, etc.). The v3-style leading `!` important modifier is still parsed, matching upstream.
-- **Fast.** Class-map trie built once per instance, native string functions on the hot path, in-process LRU result cache. ~700× faster than `gehrisandro/tailwind-merge-php` with warm cache, ~50× with the cache disabled (see `bench/bench.php`).
+- **Fast.** Class-map trie built once per instance, native string functions on the hot path, in-process LRU result cache. Roughly 50× faster than [`gehrisandro/tailwind-merge-php`](https://github.com/gehrisandro/tailwind-merge-php) on the same real-world class lists even with the cache disabled, far more with a warm cache (note: that port targets Tailwind v3, this one v4).
 - **Defensive.** `strict_types`, final classes, PHPStan level max, invalid config keys and non-string class list entries rejected with `InvalidArgumentException`.
 - **Test-based.** The behavior contract is the upstream JS test suite: 371 tests / ~1,900 assertions, including 323 merge cases extracted from and verified against the real `tailwind-merge` v3.6.0.
 
@@ -45,7 +47,6 @@ composer install
 composer test          # pest
 composer test:types    # phpstan (level max)
 composer lint          # pint
-composer bench         # benchmark vs gehrisandro/tailwind-merge-php
 ```
 
 `src/DefaultConfig.php` is generated from the upstream JS package — do not edit by hand.
