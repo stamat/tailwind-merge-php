@@ -4,7 +4,7 @@
 [![PHP Version](https://img.shields.io/packagist/php-v/stamat/tailwind-merge-php)](https://packagist.org/packages/stamat/tailwind-merge-php)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind%20CSS-v4-38bdf8)](https://tailwindcss.com)
 [![CI](https://github.com/stamat/tailwind-merge-php/actions/workflows/ci.yml/badge.svg)](https://github.com/stamat/tailwind-merge-php/actions/workflows/ci.yml)
-[![License](https://img.shields.io/packagist/l/stamat/tailwind-merge-php)](LICENSE)
+[![License](https://img.shields.io/packagist/l/stamat/tailwind-merge-php?clear)](LICENSE)
 
 Merge [Tailwind CSS](https://tailwindcss.com) class lists without style conflicts — a fast, independent PHP port of [dcastil/tailwind-merge](https://github.com/dcastil/tailwind-merge), ported directly from the JS source and not a fork of any existing PHP package.
 
